@@ -107,6 +107,7 @@ run_in_docker() {
         -i \
         --init \
         -e GITHUB_RUN_NUMBER \
+        -e USE_STATIC_RUNTIME \
         -e ARCH \
         -e CI \
         --user "$uid" \
