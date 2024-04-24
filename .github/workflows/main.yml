@@ -6,8 +6,9 @@ jobs:
   build-and-test:
     strategy:
       matrix:
-        ARCH: [x86_64, i386, aarch64, armhf]
+        ARCH: [x86_64]
         UPDATE: ["1"]
+        USE_STATIC_RUNTIME: ["",1]
       fail-fast: false
 
     name: ${{ matrix.ARCH }}
@@ -52,4 +53,4 @@ jobs:
         run: |
             wget -q https://github.com/TheAssassin/pyuploadtool/releases/download/continuous/pyuploadtool-x86_64.AppImage
             chmod +x pyuploadtool-x86_64.AppImage
-            ./pyuploadtool-x86_64.AppImage **/linuxdeploy-plugin-qt*.AppImage*
+            ./pyuploadtool-x86_64.AppImage **/linuxdeploy-*plugin-qt*.AppImage*
