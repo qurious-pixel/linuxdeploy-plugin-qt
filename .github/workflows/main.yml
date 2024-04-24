@@ -18,6 +18,7 @@ jobs:
       ARCH: ${{ matrix.ARCH }}
       BUILD_TYPE: ${{ matrix.BUILD_TYPE }}
       DEBIAN_FRONTEND: interactive
+      USE_STATIC_RUNTIME: ${{ matrix.USE_STATIC_RUNTIME }}
 
     steps:
       # check out once git command is available
