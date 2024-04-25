@@ -119,5 +119,4 @@ run_in_docker() {
 }
 
 run_in_docker bash ci/build.sh
-linuxdeploy_bin="$(ls linuxdeploy*-$ARCH.AppImage)"
-run_in_docker bash ci/test.sh "$linuxdeploy_bin"
+run_in_docker bash ci/test.sh linuxdeploy-plugin-qt"$USE_STATIC_RUNTIME"-"$ARCH".AppImage
