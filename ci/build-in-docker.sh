@@ -118,5 +118,6 @@ run_in_docker() {
         "$@"
 }
 
+linuxdeploy_bin="$(ls linuxdeploy*-$ARCH.AppImage)"
 run_in_docker bash ci/build.sh
-run_in_docker bash ci/test.sh linuxdeploy-plugin-qt-"$ARCH".AppImage
+run_in_docker bash ci/test.sh "$linuxdeploy_bin"
