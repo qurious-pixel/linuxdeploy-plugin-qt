@@ -52,7 +52,7 @@ if [[ "${USE_STATIC_RUNTIME:-}" != "" ]]; then
     runtime_filename="$(echo "$custom_runtime_url" | rev | cut -d/ -f1 | rev)"
     LDAI_RUNTIME_FILE="$(readlink -f "$runtime_filename")"
     export LDAI_RUNTIME_FILE
-    export OUTPUT="linuxdeploy-static-plugin-qt-$ARCH.AppImage"
+    export OUTPUT="linuxdeploy-plugin-qt-static-$ARCH.AppImage"
 fi
 
 wget "https://github.com/TheAssassin/linuxdeploy/releases/download/continuous/linuxdeploy-$ARCH.AppImage"
