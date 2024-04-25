@@ -7,7 +7,7 @@ if [ "$ARCH" == "" ]; then
     exit 1
 fi
 
-target="$1"
+target="$(ls linuxdeploy*-plugin-qt-x86_64.AppImage)"
 if [ "$target" == "" ]; then
     echo "Usage: $0 <target.AppImage>"
     exit 1
